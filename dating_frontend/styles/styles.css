@@ -1,0 +1,97 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* SIGN UP and SIGN IN */
+.container-signup {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+.right-picture {
+    width: 40%;
+    height: 100vh;
+    background-image: url("../assets/right-pic.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.container-left {
+    width: 60%;
+    height: 100%;
+    padding-bottom: 15px;
+
+}
+
+.error-message,
+.success-message {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: #cd0909;
+}
+
+.success-message {
+    color: #0ae167;
+}
+
+.hide {
+    display: none;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.signup-form {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.input-container input,
+.input-container select,
+.btn-submit {
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.input-container input {
+    padding-left: 5px;
+}
+
+.btn-submit {
+    background-color: #829880;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.signup-title {
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+    color: #3E230E;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.margin-top {
+    margin-top: 10%;
+}
