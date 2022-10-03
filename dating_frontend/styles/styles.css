@@ -96,7 +96,8 @@
     margin-top: 10%;
 }
 
-.error-div,.error-div-login {
+.error-div,
+.error-div-login {
     margin-right: 10%;
     margin-left: 10%;
     margin-top: 20px;
@@ -106,7 +107,30 @@
     height: fit-content;
 }
 
-.error-div-login{
+.error-div-login {
     margin-right: 0;
     margin-left: 0;
+}
+
+.last-logo,
+.resort-logo {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.resort-logo {
+    margin-top: 0;
+}
+
+.green {
+    color: #8B998A;
+}
+
+.yellow {
+    color: #F2CB70;
+}
+.logo-login{
+    position: absolute;
 }
