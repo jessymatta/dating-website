@@ -43,11 +43,29 @@ class AuthController extends Controller
                 "password"=>Hash::make($request->password)
             
         ]);
-        
+
         return response()->json([
             'message'=>'User successfully registered',
             'user'=>$user
         ], 201);
+    }
+
+    // Login 
+    public function login(Request $request){
+        $validator =Validator::make($request->all(),[
+            'username'=>'required|string',
+            'password'=>'string|min:6'
+        ]);
+
+        //if validation fails
+        if($validator->fails()){
+            return response()->json($validator->errors()->toJson(), 422);
+        }
+        //if user is not authorized
+        if(!$token=auth() -> attempt($validator->validated())){
+            return response()->json(['error'=>'Unauthorized'], 401);
+        }
+        
     }
 
 
