@@ -12,7 +12,10 @@ const interested_in_input = document.getElementById("interested_gender");
 const create_acc_btn = document.getElementById("create-acc-btn");
 //Error div 
 const error_div = document.querySelector(".error-div");
-
+//Signup api url
+const baseURL ="http://127.0.0.1:8000/api";
+const signup_url=baseURL+"/auth/register"
+console.log(signup_url);
 
 create_acc_btn.addEventListener("click", () =>{
     console.log("clicked");
@@ -28,5 +31,7 @@ create_acc_btn.addEventListener("click", () =>{
     data.append('location', location_input.value);
     data.append('birthdate', birthday_input.value);
     console.log(...data);
+
+
 });
 
