@@ -96,7 +96,7 @@
     margin-top: 10%;
 }
 
-.error-div {
+.error-div,.error-div-login {
     margin-right: 10%;
     margin-left: 10%;
     margin-top: 20px;
@@ -104,4 +104,9 @@
     background-color: rgb(214, 108, 108);
     border-radius: 5px;
     height: fit-content;
+}
+
+.error-div-login{
+    margin-right: 0;
+    margin-left: 0;
 }
