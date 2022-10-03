@@ -1,3 +1,4 @@
+
 //Getting signup page input elements
 const name_input = document.getElementById("name");
 const username_input = document.getElementById("username");
@@ -17,6 +18,20 @@ const baseURL ="http://127.0.0.1:8000/api";
 const signup_url=baseURL+"/auth/register"
 console.log(signup_url);
 
+// Posting data using axios to the register api
+const signup = async (data) => {
+
+    try{
+    const response_signup = await axios.post(signup_url,data);
+    console.log("Inside the try block of the sign up post api");
+}catch(error){
+    console.log("Inside the catch block of the sign up post api");
+    console.log(error);
+}
+
+}
+
+// When the create account button is clicked
 create_acc_btn.addEventListener("click", () =>{
     console.log("clicked");
     //Take the inputs
@@ -32,6 +47,7 @@ create_acc_btn.addEventListener("click", () =>{
     data.append('birthdate', birthday_input.value);
     console.log(...data);
 
-
+    signup(data);
 });
+
 
