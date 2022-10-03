@@ -95,3 +95,13 @@
 .margin-top {
     margin-top: 10%;
 }
+
+.error-div{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 20px;
+    padding: 8px;
+    background-color: rgb(214, 108, 108);
+    border-radius: 5px;
+    height: fit-content;
+  }
