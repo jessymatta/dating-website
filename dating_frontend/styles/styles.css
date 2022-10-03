@@ -134,3 +134,8 @@
 .logo-login{
     position: absolute;
 }
+
+.input-container label{
+    font-weight:bolder;
+    color:#434e42;
+}
