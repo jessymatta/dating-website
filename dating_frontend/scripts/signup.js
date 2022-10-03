@@ -16,5 +16,17 @@ const error_div = document.querySelector(".error-div");
 
 create_acc_btn.addEventListener("click", () =>{
     console.log("clicked");
+    //Take the inputs
+    const data = new FormData();
+    data.append('name', name_input.value);
+    data.append('username', username_input.value);
+    data.append('email', email_input.value);
+    data.append('password', password_input.value);
+    data.append('password_confirmation', confirm_password_input.value);
+    data.append('gender', gender_input.value);
+    data.append('interested_in', interested_in_input.value);
+    data.append('location', location_input.value);
+    data.append('birthdate', birthday_input.value);
+    console.log(...data);
 });
 
