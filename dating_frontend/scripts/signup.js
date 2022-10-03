@@ -12,3 +12,9 @@ const interested_in_input = document.getElementById("interested_gender");
 const create_acc_btn = document.getElementById("create-acc-btn");
 //Error div 
 const error_div = document.querySelector(".error-div");
+
+
+create_acc_btn.addEventListener("click", () =>{
+    console.log("clicked");
+});
+
