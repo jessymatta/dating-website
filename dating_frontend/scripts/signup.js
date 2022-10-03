@@ -1,4 +1,4 @@
-
+window.stop();
 //Getting signup page input elements
 const name_input = document.getElementById("name");
 const username_input = document.getElementById("username");
