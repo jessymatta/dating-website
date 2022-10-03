@@ -23,14 +23,9 @@ const signup = async (data) => {
 
     try {
         const response_signup = await axios.post(signup_url, data);
-        console.log("Inside the try block of the sign up post api");
         window.location.href="login.html";
     } catch (error) {
-        console.log("Inside the catch block of the sign up post api");
-        console.log(error.response.data);
         const errors = JSON.parse(error.response.data);
-        console.log(errors);
-
         error_div.classList.remove('hide')
         for (let [key, value] of Object.entries(errors)) {
             error_div.append(`${value}`);
@@ -40,7 +35,6 @@ const signup = async (data) => {
 }
     // When the create account button is clicked
     create_acc_btn.addEventListener("click", () => {
-        console.log("clicked");
         error_div.classList.add('hide')
         error_div.innerHTML="";
         //Take the inputs
@@ -54,7 +48,6 @@ const signup = async (data) => {
         data.append('interested_in', interested_in_input.value);
         data.append('location', location_input.value);
         data.append('birthdate', birthday_input.value);
-        console.log(...data);
 
         signup(data);
     });
