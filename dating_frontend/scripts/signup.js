@@ -23,7 +23,7 @@ const signup = async (data) => {
 
     try {
         const response_signup = await axios.post(signup_url, data);
-        window.location.href="login.html";
+        window.location.href = "login.html";
     } catch (error) {
         const errors = JSON.parse(error.response.data);
         error_div.classList.remove('hide')
@@ -33,24 +33,24 @@ const signup = async (data) => {
         }
     }
 }
-    // When the create account button is clicked
-    create_acc_btn.addEventListener("click", () => {
-        error_div.classList.add('hide')
-        error_div.innerHTML="";
-        //Take the inputs
-        const data = new FormData();
-        data.append('name', name_input.value);
-        data.append('username', username_input.value);
-        data.append('email', email_input.value);
-        data.append('password', password_input.value);
-        data.append('password_confirmation', confirm_password_input.value);
-        data.append('gender', gender_input.value);
-        data.append('interested_in', interested_in_input.value);
-        data.append('location', location_input.value);
-        data.append('birthdate', birthday_input.value);
+// When the create account button is clicked
+create_acc_btn.addEventListener("click", () => {
+    error_div.classList.add('hide')
+    error_div.innerHTML = "";
+    //Take the inputs
+    const data = new FormData();
+    data.append('name', name_input.value);
+    data.append('username', username_input.value);
+    data.append('email', email_input.value);
+    data.append('password', password_input.value);
+    data.append('password_confirmation', confirm_password_input.value);
+    data.append('gender', gender_input.value);
+    data.append('interested_in', interested_in_input.value);
+    data.append('location', location_input.value);
+    data.append('birthdate', birthday_input.value);
 
-        signup(data);
-    });
+    signup(data);
+});
 
 
 
