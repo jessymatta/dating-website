@@ -277,7 +277,6 @@ i:hover {
 }
 
 .age_and_heart{
-    /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -381,8 +380,6 @@ i:hover {
     height: 150px;
     border-radius: 50%;
     margin-top: 100px;
-    /* position: absolute; */
-
 }
 
 .edit-bio {
@@ -391,11 +388,9 @@ i:hover {
 }
 
 .fa-image {
-    /* border: 2px solid red; */
     color: #6C785E;
     width: 30px;
     height: 30px;
-    /* position: relative; */
 }
 
 #upload-pp{
