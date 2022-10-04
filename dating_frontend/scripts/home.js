@@ -1,8 +1,8 @@
 console.log("working");
-const cardsContainer = document.querySelector('.user_cards_container')
+const cardsContainer = document.querySelector('.user_cards_container');
 console.log(cardsContainer);
-const id = JSON.parse(localStorage.getItem('user')).id
-const api_token = JSON.parse(localStorage.getItem('token'))
+const id = JSON.parse(localStorage.getItem('user')).id;
+const api_token = JSON.parse(localStorage.getItem('token'));
 console.log(api_token);
 console.log(id);
 const baseURL = "http://127.0.0.1:8000/api/v0.1";
