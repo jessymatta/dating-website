@@ -11,9 +11,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function __construct(){
-        $this->middleware('auth:api', ['except' => ['login', 'register']]);
-    }
+
 
     public function register(Request $request){
         $validator =Validator::make($request->all(),[
@@ -79,34 +77,5 @@ class AuthController extends Controller
             'user'=>auth()->user()
         ]);
     }
-
-    //TODO Remove Logout and just destroy the jwt on the frontend
-    public function logout(){
-        auth()->logout();
-        return response()->json([
-            'message'=>'User logged out'
-        ]);
-    }
-
-    public function addFavorite($id){
-        //Add to favorites
-        $fav_user=auth()->user()->favorites()->attach([$id]);
-        return response()->json([
-            "status"=>"success",
-            'message'=>'User added to favorites'
-        ]);
-    }
-
-    public function removeFavorite($id){
-        //Remove from favorites
-        $remove_user=auth()->user()->favorites()->detach([$id]);
-        return response()->json([
-            "status"=>"success",
-            'message'=>'User removed from favorites'
-        ]);
-    }
-
-    
-
 
 }
