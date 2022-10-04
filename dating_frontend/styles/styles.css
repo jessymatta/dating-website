@@ -236,10 +236,12 @@ i:hover {
     padding-top: 0 8px;
 }
 
-.user_cards_container h6 {
-    font-size: 26px;
+.user_cards_container h8 {
+    font-size: 15px;
     text-align: center;
     margin: 0;
+    color:#434e42;
+    font-weight: 600;
 }
 
 
@@ -260,12 +262,12 @@ i:hover {
     text-align: center;
     border-radius: 20px;
     cursor: pointer;
-    padding-top: 10px;
+    padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.4s;
 }
 
-.card .description {
+.card .user_loction {
     padding: 4px;
 }
 
@@ -273,6 +275,20 @@ i:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     transform: translate(0px, -8px);
 }
+
+.age_and_heart{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.user_location{
+    color:#F2CB70 !important;
+}
+
 
 /* Edit profile Modal */
 .modal-bg {
