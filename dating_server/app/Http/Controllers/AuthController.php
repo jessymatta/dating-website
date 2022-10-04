@@ -92,7 +92,8 @@ class AuthController extends Controller
         //Add to favorites
         $fav_user=auth()->user()->favorites()->attach([$id]);
         return response()->json([
-            'message'=>'User added to'
+            "status"=>"success",
+            'message'=>'User added to favorites'
         ]);
     }
 
