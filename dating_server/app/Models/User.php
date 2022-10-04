@@ -40,4 +40,9 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims(){
         return [];
     }
+
+    public function favorites(){
+        return $this->belongsToMany(User::class, 'favorites', 'user_id', 'favorited_user_id');
+        //belongsToMany(related, table, foreignPivotKey, relatedPivotKey)
+    }
 }
