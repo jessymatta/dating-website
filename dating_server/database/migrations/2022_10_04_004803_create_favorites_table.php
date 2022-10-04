@@ -19,7 +19,6 @@ class CreateFavoritesTable extends Migration
             $table->foreign('favorited_user_id')->references('id')->on('users');
             $table->integer('user_id')->unsigned()->index()->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users');
-
         });
     }
 
