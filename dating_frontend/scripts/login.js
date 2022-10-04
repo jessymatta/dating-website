@@ -18,8 +18,11 @@ const login = async (data) => {
         const response_login = await axios.post(login_url, data);
         localStorage.setItem('token', JSON.stringify(response_login.data.access_token))
         localStorage.setItem('user', JSON.stringify(response_login.data.user))
+        setTimeout(function () {
+            window.location.href = './homepage.html'
+        }, 1000)
     } catch (error) {
-        error_div.append(JSON.stringify(error.message).replace(/[^a-zA-Z0-9 ]/g, '')+"---"+JSON.stringify(error.response.data).replace(/[^a-zA-Z0-9 ]/g, ' '));
+        error_div.append(JSON.stringify(error.message).replace(/[^a-zA-Z0-9 ]/g, '') + "---" + JSON.stringify(error.response.data).replace(/[^a-zA-Z0-9 ]/g, ' '));
         error_div.classList.remove('hide');
     }
 
