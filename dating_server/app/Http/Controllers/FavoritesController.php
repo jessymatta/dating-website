@@ -11,7 +11,6 @@ class FavoritesController extends Controller
 {
     public function addFavorite($id){
         //Add to favorites
-        // $fav_user=auth()->user()->favorites()->attach($id);
         $fav_user=Auth::user()->favorites()->attach($id);
         return response()->json([
             "status"=>"success",
