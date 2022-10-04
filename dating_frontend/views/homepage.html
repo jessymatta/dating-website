@@ -38,31 +38,37 @@
     <div class="user_cards_container">
 
         <div class="card">
-            
+
             <img src="../assets/dummy-profile-pic.png">
             <h3>Name</h3>
             <p class="description"> location</p>
-                <h6><span class="user_price">bio</span></h6>
-                <i class="fa-regular fa-heart green"></i>
+            <h6><span class="user_price">bio</span></h6>
+            <i class="fa-regular fa-heart green"></i>
         </div>
     </div>
     <!-- End of cards container div -->
-     <!-- ! START Edit profile Modal -->
-     <div class="modal-bg">
+    <!-- ! START Edit profile Modal -->
+    <div class="modal-bg">
         <div class="modal">
             <span class="modal-close">X</span>
-            <div class="picture-modal"> <img src="../assets/dummy-profile-pic.png"></div>
+            <div class="picture-modal">
+                <img id="profile-div" src="../assets/dummy-profile-pic.png">
+                <label class="icon-img" for="upload-pp"><i class="fa-solid fa-image"></i></label>
+                <input id="upload-pp" type="file" id="input" accept=".jpg, .jpeg, .png">
+
+            </div>
             <div class="input-fields">
                 <h2>Edit Profile</h2>
                 <!-- Name -->
                 <label for="name">Name</label>
                 <input id="profile-input-name" type="text" name="name">
                 <!-- Username -->
-                <label for="username">Username</label>
-                <input id="profile-input-username" type="text" name="username">
+                <!-- <label for="username">Username</label>
+                <input id="profile-input-username" type="text" name="username"> -->
                 <!-- Email -->
-                <label for="email">Email</label>
-                <input id="profile-input-email" type="text" name="email">
+                <label for="bio">Bio</label>
+                <textarea class="edit-bio" id="profile-input-email"></textarea>
+                <!-- <input id="profile-input-email" type="text" name="bio"> -->
                 <!-- Save changes button -->
                 <button class="edit_profile_modal_save_btn">Save changes</button>
             </div>

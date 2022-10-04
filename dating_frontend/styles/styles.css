@@ -360,10 +360,34 @@ i:hover {
     background-color: #323246;
 }
 
-.picture-modal img{
-    width:150px;
-    height:150px;
+.picture-modal img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-top: 100px;
+    /* position: absolute; */
 
+}
+
+.edit-bio {
+    height: 100px;
+    padding-left: 10px;
+}
+
+.fa-image {
+    /* border: 2px solid red; */
+    color: #6C785E;
+    width: 30px;
+    height: 30px;
+    /* position: relative; */
+}
+
+#upload-pp{
+    display: none;
+
+}
+
+.icon-img{
+    position: fixed;
+    position: relative;
 }
