@@ -7,7 +7,7 @@ const login_btn = document.getElementById("login-btn");
 //Error div 
 const error_div = document.querySelector(".error-div-login");
 //Login api url
-const baseURL = "http://127.0.0.1:8000/api";
+const baseURL = "http://127.0.0.1:8000/api/v0.1";
 const login_url = baseURL + "/login"
 
 

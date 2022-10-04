@@ -14,8 +14,8 @@ const create_acc_btn = document.getElementById("create-acc-btn");
 //Error div 
 const error_div = document.querySelector(".error-div");
 //Signup api url
-const baseURL = "http://127.0.0.1:8000/api";
-const signup_url = baseURL + "/auth/register"
+const baseURL = "http://127.0.0.1:8000/api/v0.1";
+const signup_url = baseURL + "/register"
 console.log(signup_url);
 
 // Posting data using axios to the register api
