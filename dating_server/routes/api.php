@@ -12,6 +12,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['middleware' => 'jwt.auth', 'prefix' => 'auth'], function($router){
     Route::post('/register',[AuthController::class, 'register']);
     Route::get('add_favorite/{id}',[AuthController::class, 'addFavorite'])->name('add_favorite');
+    Route::get('remove_favorite/{id}',[AuthController::class, 'removeFavorite'])->name('remove_favorite');
 });
 
 Route::post('/login',[AuthController::class, 'login'])->name('login');
