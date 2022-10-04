@@ -17,18 +17,13 @@ async function getInterestedInUsers() {
             }
         }
     )
-    // console.log(response);
-    // console.log(JSON.stringify(response.data.interested_in_profiles));
+
     const profiles = response.data.interested_in_profiles;
     for (let i = 0; i < profiles.length; i++) {
-        console.log(profiles[i]);
         let profile_name = profiles[i].name;
         let profile_bio = profiles[i].bio ? profiles[i].bio : "nobio";
-        console.log(profile_bio);
         let profile_location = profiles[i].location;
-        console.log(profile_location);
         let profile_age = calculateAge(profiles[i].birthdate)
-        console.log("originalll === "+profiles[i].birthdate);
 
         const profile_to_append = `<div class="card">
 
@@ -52,14 +47,16 @@ function calculateAge(date) {
     const myArray = date.split("-");
 
     myArray.forEach(element => {
-        console.log(element);
     });
     const user_dob=myArray[0];
 
-    // console.log("ssss"+now);
-    // console.log("user_dob"+user_dob);
-    // console.log(eval(now-user_dob))
     return eval(now-user_dob)
 }
 
 getInterestedInUsers();
+
+//logout
+const logout = document.getElementById("logout");
+logout.addEventListener("click", (e)=>{
+    window.localStorage.clear();
+})
