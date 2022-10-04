@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | LAST RESORT</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+
+<body>
+    <div class="container-signup">
+
+        <div class="container-left">
+            <div class="logo">
+                <p><span class="last-logo green">LAST</span><br><span class="resort-logo yellow">RESORT</p></span>
+            </div>
+
+            <h1 class="signup-title">SIGNUP</h1>
+            <form action="" class="signup-form" id="client">
+
+                <!-- NAME -->
+                <div class="input-container">
+                    <label for="name" class="label">Name</label>
+                    <input type="text" name="name" class="input" id="name" placeholder="Enter your name">
+                </div>
+                <!-- USERNAME -->
+                <div class="input-container">
+                    <label for="username" class="label">Username</label>
+                    <input type="text" name="username" class="input" id="username" placeholder="Enter your username">
+                </div>
+                <!-- EMAIL -->
+                <div class="input-container">
+                    <label for="email" class="label">E-mail</label>
+                    <input type="text" name="email" class="input" id="email" placeholder="Enter your email">
+                </div>
+                <!-- PASSWORD -->
+                <div class="input-container">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" name="password" class="input" id="password"
+                        placeholder="Enter your password">
+                </div>
+                <!-- CONFIRM PASSWORD -->
+                <div class="input-container">
+                    <label for="password-confirm" class="label">Confirm Password</label>
+                    <input type="password" name="password-confirm" class="input" id="password-confirm"
+                        placeholder="Confirm your password">
+                </div>
+                <!-- BITHDATE -->
+                <div class="input-container">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+                <!-- LOCATION -->
+                <div class="input-container">
+                    <label for="location" class="label">Location</label>
+                    <input type="text" name="location" class="input" id="location" placeholder="Enter your location">
+                </div>
+                <!-- GENDER -->
+                <div class="input-container">
+                    <label for="gender">I am a </label>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <!-- Interested in -->
+                <div class="input-container">
+                    <label for="gender">Looking for a </label>
+                    <select name="interested_gender" id="interested_gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="both">Both</option>
+                    </select>
+                </div>
+                <!-- Have an account redirect to login page or cutton to creat account -->
+                <div class="login-actions">
+                    <div class="account-handle">
+                        <a href="./login.html">Have an account?</a>
+                    </div>
+
+                    <button type="button" id="create-acc-btn" class="btn-submit">Create Account</button>
+                </div>
+            </form>
+            <div class="error-div hide"></div>
+        </div>
+
+        <div class="right-picture"></div>
+
+    </div>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../scripts/signup.js"></script>
+</body>
+
+</html>
