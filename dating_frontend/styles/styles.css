@@ -131,11 +131,274 @@
 .yellow {
     color: #F2CB70;
 }
-.logo-login{
+
+.logo-login {
     position: absolute;
 }
 
-.input-container label{
-    font-weight:bolder;
+.input-container label {
+    font-weight: bolder;
+    color: #434e42;
+}
+
+/* Homepage Section */
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    background-color: #6C785E;
+    padding-right: 40px;
+    top: 0;
+}
+
+
+i {
+    color: white;
+    cursor: pointer;
+}
+
+nav .logo {
+    flex: 1;
+    margin-left: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+nav ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+nav ul li a:hover,
+i:hover {
+    color: #EBBF5A;
+}
+
+.white {
+    color: white;
+}
+
+.hero-pic {
+    width: 100%;
+    height: 280px;
+    margin-top: 80px;
+    background-image: url("../assets/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-title {
+    color: #6C785E;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+/* Profiles section */
+.user_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.user_cards_container h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.user_cards_container p {
+    text-align: center;
+    color: gray;
+    padding-top: 0 8px;
+}
+
+.user_cards_container h8 {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
     color:#434e42;
+    font-weight: 600;
+}
+
+
+.card img {
+    width: 50%;
+    height: 80%;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.card {
+    width: 15%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.4s;
+}
+
+.card .user_loction {
+    padding: 4px;
+}
+
+.card:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    transform: translate(0px, -8px);
+}
+
+.age_and_heart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.user_location{
+    color:#F2CB70 !important;
+}
+
+
+/* Edit profile Modal */
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    background-color: white;
+    width: 35%;
+    height: 50%;
+    display: flex;
+    border-radius: 20px;
+}
+
+.modal-close {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+.modal-close:hover {
+    opacity: 0.4;
+}
+
+.input-fields {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.input-fields input {
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.input-fields label {
+    font-size: 20px;
+    font-weight: 500;
+    color: #6C785E;
+    margin-top: 15px;
+}
+
+.input-fields button {
+    height: 17%;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    background-color: #6C785E;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background-color: #323246;
+}
+
+.picture-modal img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+
+.edit-bio {
+    height: 100px;
+    padding-left: 10px;
+}
+
+.fa-image {
+    color: #6C785E;
+    width: 30px;
+    height: 30px;
+}
+
+#upload-pp{
+    display: none;
+
+}
+
+.icon-img{
+    position: fixed;
+    position: relative;
 }
