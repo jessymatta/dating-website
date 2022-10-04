@@ -27,6 +27,8 @@ async function getInterestedInUsers() {
         console.log(profile_bio);
         let profile_location = profiles[i].location;
         console.log(profile_location);
+        let profile_age = calculateAge(profiles[i].birthdate)
+        console.log("originalll === "+profiles[i].birthdate);
 
         const profile_to_append = `<div class="card">
 
@@ -36,7 +38,7 @@ async function getInterestedInUsers() {
             <p class="user_location">${profile_location}</p>
 
             <div class="age_and_heart">
-                <h8>Age:<span class="product_price">25</span></h8>
+                <h8>Age:<span class="product_price">${profile_age}</span></h8>
                 <i class="fa-regular fa-heart green"></i>
             </div>
             <!-- <i class="fa-regular fa-heart green"></i> -->
@@ -46,10 +48,18 @@ async function getInterestedInUsers() {
     }
 }
 function calculateAge(date) {
-    const now = new Date();
-    const diff = Math.abs(now - date);
-    const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
-    return age
+    const now = new Date().getFullYear();
+    const myArray = date.split("-");
+
+    myArray.forEach(element => {
+        console.log(element);
+    });
+    const user_dob=myArray[0];
+
+    // console.log("ssss"+now);
+    // console.log("user_dob"+user_dob);
+    // console.log(eval(now-user_dob))
+    return eval(now-user_dob)
 }
 
 getInterestedInUsers();
