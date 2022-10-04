@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
-use App\Helpers\ResponseHelper;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -80,7 +79,7 @@ class AuthController extends Controller
         ]);
     }
 
-    //TODO Remove Logout and just destroy the jwt on the frontend
+    //Logout
     public function logout(){
         auth()->logout();
         return response()->json([
@@ -88,15 +87,6 @@ class AuthController extends Controller
         ]);
     }
 
-    public function addFavorite($id){
-        //Add to favorites
-        $fav_user=auth()->user()->favorites()->attach([$id]);
-        return response()->json([
-            'message'=>'User added to favorites'
-        ]);
-    }
-
-    
 
 
 }
