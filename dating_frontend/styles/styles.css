@@ -195,7 +195,6 @@ nav ul li a:hover {
     color: white;
 }
 
-/* hero img */
 .hero-pic{
     width: 100%;
     height: 280px;
@@ -205,3 +204,11 @@ nav ul li a:hover {
     background-size: cover;
     background-position: center;
 }
+
+.page-title{
+    color: #6C785E;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
