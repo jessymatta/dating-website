@@ -98,11 +98,11 @@ class AuthController extends Controller
     }
 
     public function removeFavorite($id){
-        //Add to favorites
-        $fav_user=auth()->user()->favorites()->detach([$id]);
+        //Remove from favorites
+        $remove_user=auth()->user()->favorites()->detach([$id]);
         return response()->json([
             "status"=>"success",
-            'message'=>'User added to favorites'
+            'message'=>'User removed from favorites'
         ]);
     }
 
