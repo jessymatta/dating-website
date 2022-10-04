@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\BlockedUsersController;
+use App\Http\Controllers\UserController;
 
 
 Route::group(['prefix' => 'v0.1'], function () {
