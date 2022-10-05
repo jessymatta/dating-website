@@ -31,9 +31,8 @@ async function getInterestedInUsers() {
 
             <div class="age_and_heart">
                 <h8>Age:<span class="product_price">${profile_age}</span></h8>
-                <i class="fa-regular fa-heart green"></i>
+                <!--<i class="fa-regular fa-heart green"></i>-->
             </div>
-            <!-- <i class="fa-regular fa-heart green"></i> -->
         </div>`
         cardsContainer.innerHTML += profile_to_append;
     }
