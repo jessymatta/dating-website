@@ -47,7 +47,7 @@
             <p><span class="green">Bio:</span><span class="yellow"></span></p>
 
             <div class="single_user_actions">
-                <i class="fa-regular fa-message"></i>
+                <i id="send-a-msg" class="fa-regular fa-message"></i>
                 <i class="fa-solid fa-ban"></i>
                 <i class="fa-regular fa-heart"></i>
             </div>
@@ -77,11 +77,29 @@
     </div>
     <!--! END Edit Profile Modal -->
 
+    <!-- Start send message modal -->
+    <!-- ! START Edit profile modall -->
+    <div class="msg-bg">
+        <div class="modall">
+            <span class="modall-close">X</span>
+            <div class="input-fields-msg">
+                <div class="msg-input">
+                    <label for="msg">Enter your message</label>
+                    <textarea id="msg-input"></textarea>
+                </div>
+                <img class="send-icon" src="../assets/send.png">
+            </div>
+        </div>
+    </div>
+    <!--! END Edit Profile modall -->
+    <!-- end send message modal -->
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/edit_profile.js"></script>
     <!-- <script src="../scripts/home.js"></script> -->
     <script src="../scripts/single_user.js"></script>
     <script src="../scripts/logout.js"></script>
+    <script src="../scripts/send_msg.js"></script>
 </body>
 
 </html>
