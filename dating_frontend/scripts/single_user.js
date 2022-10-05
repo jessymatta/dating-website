@@ -30,13 +30,8 @@ function createCard(user_name, user_age, user_location, user_bio) {
     //Adding an eventlisteners to the heart here becuase the div is a string and it cannot be accessed later on
 
     const heart_icon = document.getElementById("heart");
-    console.log(heart_icon)
     heart_icon.addEventListener("click", ()=>{
-        // heart_icon
         heart_icon.classList.add("fa-solid");
-        // heart_icon.style.backgroundColor="red";
-        console.log("balizzz")
-        //call api
         favUser();
 
     })

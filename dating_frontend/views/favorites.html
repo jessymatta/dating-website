@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | LAST RESORT</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="https://kit.fontawesome.com/f95bd4b1c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- START Nav bar section -->
+    <nav>
+        <div class="logo">
+            <p><span class="last-logo white">LAST</span><br><span class="resort-logo yellow">RESORT</p></span>
+        </div>
+        <ul>
+            <li><a href="#">Homepage</i></a></li>
+            <li id="edit-profile"><a href="#">Profile</i></a></li>
+            <li><a href="#">Favorites</i></a></li>
+            <li><a href="#">Messages</i></a></li>
+            <li><a href="./login.html" id="logout"><i class="fa-solid fa-sign-out"></i></a></li>
+        </ul>
+        <div class="menu">
+        </div>
+    </nav>
+    <!-- END Nav bar section -->
+    <div class="hero-pic">
+    </div>
+    <div class="page-title">
+        <h1>FAVORITES</h1>
+    </div>
+
+    <!-- Profile cards -->
+
+    <!-- To append to the below class in js when adding users -->
+    <div class="user_cards_container">
+
+    </div>
+    <!-- End of cards container div -->
+    <!-- ! START Edit profile Modal -->
+    <div class="modal-bg">
+        <div class="modal">
+            <span class="modal-close">X</span>
+            <div class="picture-modal">
+                <img id="profile-div" src="../assets/dummy-profile-pic.png">
+                <label class="icon-img" for="upload-pp"><i class="fa-solid fa-image"></i></label>
+                <input id="upload-pp" type="file" id="input" accept=".jpg, .jpeg, .png">
+
+            </div>
+            <div class="input-fields">
+                <h2>Edit Profile</h2>
+                <label for="name">Name</label>
+                <input id="profile-input-name" type="text" name="name">
+                <label for="bio">Bio</label>
+                <textarea class="edit-bio" id="profile-input-bio"></textarea>
+                <button class="edit_profile_modal_save_btn">Save changes</button>
+            </div>
+        </div>
+    </div>
+    <!--! END Edit Profile Modal -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../scripts/edit_profile.js"></script>
+    <script src="../scripts/home.js"></script>
+    <script src="../scripts/single_user.js"></script>
+    <script src="../scripts/logout.js"></script>
+</body>
+
+</html>
