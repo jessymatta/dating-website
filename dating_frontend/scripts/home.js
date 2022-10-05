@@ -61,11 +61,6 @@ function calculateAge(date) {
     return eval(now - user_dob)
 }
 
-//logout
-const logout = document.getElementById("logout");
-logout.addEventListener("click", (e) => {
-    window.localStorage.clear();
-})
 
 //Calling the main function
 getInterestedInUsers();
