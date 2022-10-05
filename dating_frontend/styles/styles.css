@@ -438,3 +438,35 @@ i:hover {
 
 }
 
+/* Messages page */
+.msgs-container{
+    border: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    text-align: center;
+    padding:20px;
+    background-color:rgba(143, 160, 137,0.24);
+    /* justify-content: center;
+    align-items: center; */
+}
+.msgs-container h1{
+    margin-bottom: 10px;
+    color:#6C785E;
+
+}
+
+.message{
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    height:40px;
+    padding: 20px;
+    background-color: #FAF9F9;
+    /* text-align: center;
+    justify-items: center; */
+    align-items: center;
+    /* width: fit-content; */
+
+}
