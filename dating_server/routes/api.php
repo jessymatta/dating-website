@@ -12,6 +12,7 @@ use App\Http\Controllers\UploadPPController;
 Route::group(['prefix' => 'v0.1'], function () {
     Route::group(['middleware' => 'auth:api'], function () {
         Route::get('/homepage', [UserController::class, 'getUsersInterestedIn'])->name('homepage');
+        Route::get('/get_favorites', [FavoritesController::class, 'getAllFavorites'])->name('get_favorites');
         Route::get('/add_favorite/{id}', [FavoritesController::class, 'addFavorite'])->name('add_favorite');
         Route::get('/remove_favorite/{id}', [FavoritesController::class, 'removeFavorite'])->name('remove_favorite');
         Route::get('/block_user/{id}', [BlockedUsersController::class, 'blockUser'])->name('block_user');
