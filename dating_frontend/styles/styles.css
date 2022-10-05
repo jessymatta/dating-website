@@ -402,3 +402,39 @@ i:hover {
     position: fixed;
     position: relative;
 }
+
+/* Single user page */
+.user_card{
+    width: 60%;
+    /* border: 2px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+.single_user_actions {
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    /* margin-top: 20%; */
+}
+.single_user_actions i{
+    color: #6C785E ;
+    font-size: 40px;
+}
+
+.single_user_info p{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.single_user_info{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
