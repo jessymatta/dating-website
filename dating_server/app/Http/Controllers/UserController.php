@@ -36,7 +36,7 @@ class UserController extends Controller
         return response()->json([
             "status"=>"success",
             "message"=>"returned user profile",
-            "user info"=> $to_return
+            "user_info"=> $to_return
         ]);
     }
 }
