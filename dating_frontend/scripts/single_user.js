@@ -1,4 +1,5 @@
 const get_profile_url = "http://127.0.0.1:8000/api/v0.1/get_user";
+const add_to_fav_url = "http://127.0.0.1:8000/api/v0.1/add_favorite";
 const single_page_container = document.querySelector(".user_card");
 let user_id = "";
 const api_tokenn = JSON.parse(localStorage.getItem('token'));
@@ -18,14 +19,28 @@ function createCard(user_name, user_age, user_location, user_bio) {
     <div class="single_user_actions">
         <i class="fa-regular fa-message"></i>
         <i class="fa-solid fa-ban"></i>
-        <i class="fa-regular fa-heart"></i>
+        <i id="heart" class="fa-regular fa-heart"></i>
     </div>
 </div>`;
 
     if (single_page_container) {
         single_page_container.innerHTML = card_to_append;
     }
-    return single_page_container;
+
+    //Adding an eventlisteners to the heart here becuase the div is a string and it cannot be accessed later on
+
+    const heart_icon = document.getElementById("heart");
+    console.log(heart_icon)
+    heart_icon.addEventListener("click", ()=>{
+        // heart_icon
+        heart_icon.classList.add("fa-solid");
+        // heart_icon.style.backgroundColor="red";
+        console.log("balizzz")
+        //call api
+        favUser();
+
+    })
+
 }
 
 //checking if the clicked user id is in local storage
@@ -58,6 +73,20 @@ function calculateAge(date) {
     });
     const user_dob = myArray[0];
     return eval(now - user_dob)
+}
+
+//----------------------------------------------------favorites---------------------------------
+const favUser = async () => {
+    try {
+        const response = await axios.get(`${add_to_fav_url}/${user_id}`, {
+            headers: {
+                'Authorization': `bearer ${api_tokenn}`
+            }
+        });
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 // Calling the main function 
