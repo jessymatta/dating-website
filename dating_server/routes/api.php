@@ -7,6 +7,7 @@ use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\BlockedUsersController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UploadPPController;
+use App\Http\Controllers\MessageController;
 
 
 Route::group(['prefix' => 'v0.1'], function () {
@@ -18,6 +19,7 @@ Route::group(['prefix' => 'v0.1'], function () {
         Route::get('/block_user/{id}', [BlockedUsersController::class, 'blockUser'])->name('block_user');
         Route::post('/upload_pp', [UploadPPController::class, 'uploadProfilePic'])->name('upload_pp');
         Route::get('/get_user/{id}', [UserController::class, 'getUserById'])->name('get_user');
+        Route::get('/send_message/{id}', [MessageController::class, 'sendMessage'])->name('send_message');
     });
 
     Route::post('/register', [AuthController::class, 'register'])->name('register');
