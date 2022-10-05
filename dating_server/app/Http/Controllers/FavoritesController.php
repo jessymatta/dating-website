@@ -26,4 +26,15 @@ class FavoritesController extends Controller
             'message'=>'User removed from favorites'
         ]);
     }
+
+    public function getAllFavorites(){
+        //Get all favorited users
+        $favorited_users = Auth::user()->favorites;
+        return response()->json([
+            "status"=>"success",
+            'message'=>'Retrieved all favorited users',
+            "fav_users"=>$favorited_users
+        ]);
+
+    }
 }

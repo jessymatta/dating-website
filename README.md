@@ -18,3 +18,6 @@ This project was not completed and is missing features
 <img src="./dating_frontend/assets/readme-ss/login.PNG">
 <img src="./dating_frontend/assets/readme-ss/homepage.PNG">
 <img src="./dating_frontend/assets/readme-ss/editprofile.PNG">
+<img src="./dating_frontend/assets/readme-ss/single_page.PNG">
+<img src="./dating_frontend/assets/readme-ss/msg.PNG">
+<img src="./dating_frontend/assets/readme-ss/msgs.PNG">

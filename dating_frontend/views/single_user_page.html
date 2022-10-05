@@ -16,7 +16,7 @@
             <p><span class="last-logo white">LAST</span><br><span class="resort-logo yellow">RESORT</p></span>
         </div>
         <ul>
-            <li><a href="#">Homepage</i></a></li>
+            <li><a href="./homepage.html">Homepage</i></a></li>
             <li id="edit-profile"><a href="#">Profile</i></a></li>
             <li><a href="./favorites.html">Favorites</i></a></li>
             <li><a href="./messages.html">Messages</i></a></li>
@@ -28,14 +28,27 @@
     <!-- END Nav bar section -->
     <div class="hero-pic">
     </div>
-    <div class="page-title">
-        <h1>FIND YOUR POTENTIAL PARTNER</h1>
-    </div>
 
     <!-- Profile cards -->
 
     <!-- To append to the below class in js when adding users -->
-    <div class="user_cards_container">
+    <div class="user_card">
+
+        <div class="single_user_pp">
+            <img src="../assets/dummy-profile-pic.png">
+        </div>
+        <div class="single_user_info">
+            <p><span class="green">Name:</span><span class="yellow"></span></p>
+            <p><span class="green">Age:</span><span class="yellow"></span></p>
+            <p><span class="green">Location:</span><span class="yellow"></span></p>
+            <p><span class="green">Bio:</span><span class="yellow"></span></p>
+
+            <div class="single_user_actions">
+                <i id="send-a-msg" class="fa-regular fa-message"></i>
+                <i class="fa-solid fa-ban"></i>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
 
     </div>
     <!-- End of cards container div -->
@@ -61,9 +74,25 @@
     </div>
     <!--! END Edit Profile Modal -->
 
+    <!-- Start send message modal -->
+    <!-- ! START send a modall -->
+    <div class="msg-bg">
+        <div class="modall">
+            <span class="modall-close">X</span>
+            <div class="input-fields-msg">
+                <div class="msg-input">
+                    <label for="msg">Enter your message</label>
+                    <textarea id="msg-input"></textarea>
+                </div>
+                <img id="send-msg" class="send-icon" src="../assets/send.png">
+            </div>
+        </div>
+    </div>
+    <!--! END send a msg modall -->
+    <!-- end send message modal -->
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/edit_profile.js"></script>
-    <script src="../scripts/home.js"></script>
     <script src="../scripts/single_user.js"></script>
     <script src="../scripts/logout.js"></script>
 </body>

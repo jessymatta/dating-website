@@ -18,14 +18,10 @@ const user_bio = user_in_storage.bio;
 client_name_input.value = user_name;
 client_bio_input.value = user_bio
 
-console.log("-----------" + user_name + "-----------");
-console.log(client_id);
-
 
 //When the button that should show the modal is clicked
 modalBtn.addEventListener('click', function () {
     modalBg.classList.add('bg-active');
-    // getProfile();
 });
 
 //When the X at the top left of the modal is clicked
@@ -38,7 +34,6 @@ input.addEventListener("change", (e) => {
     let image_file = e.target.files[0];
     let reader = new FileReader;
     reader.readAsDataURL(image_file);
-    console.log(image_file);
 
     reader.onload = (e) => {
         let image_url = e.target.result;

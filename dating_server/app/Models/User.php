@@ -49,4 +49,13 @@ class User extends Authenticatable implements JWTSubject
     public function blockUser(){
         return $this->belongsToMany(User::class, 'blocks', 'user_id', 'blocked_user_id');
     }
+
+        /*By default, only the model keys will be present on the pivot model. 
+    If your intermediate table contains extra attributes, 
+    you must specify them when defining the relationship:
+        return $this->belongsToMany(Role::class)->withPivot('active', 'created_by');*/
+
+    public function messages(){
+        return $this->belongsToMany(User::class, 'messages', 'sender_id', 'receiver_id')->withTimestamps()->withPivot('content');
+    }
 }
