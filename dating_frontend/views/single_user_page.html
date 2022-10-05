@@ -18,8 +18,8 @@
         <ul>
             <li><a href="./homepage.html">Homepage</i></a></li>
             <li id="edit-profile"><a href="#">Profile</i></a></li>
-            <li><a href="#">Favorites</i></a></li>
-            <li><a href="#">Messages</i></a></li>
+            <li><a href="./favorites.html">Favorites</i></a></li>
+            <li><a href="./messages.html">Messages</i></a></li>
             <li><a href="./login.html" id="logout"><i class="fa-solid fa-sign-out"></i></a></li>
         </ul>
         <div class="menu">
@@ -78,7 +78,7 @@
     <!--! END Edit Profile Modal -->
 
     <!-- Start send message modal -->
-    <!-- ! START Edit profile modall -->
+    <!-- ! START send a modall -->
     <div class="msg-bg">
         <div class="modall">
             <span class="modall-close">X</span>
@@ -87,19 +87,17 @@
                     <label for="msg">Enter your message</label>
                     <textarea id="msg-input"></textarea>
                 </div>
-                <img class="send-icon" src="../assets/send.png">
+                <img id="send-msg" class="send-icon" src="../assets/send.png">
             </div>
         </div>
     </div>
-    <!--! END Edit Profile modall -->
+    <!--! END send a msg modall -->
     <!-- end send message modal -->
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/edit_profile.js"></script>
-    <!-- <script src="../scripts/home.js"></script> -->
     <script src="../scripts/single_user.js"></script>
     <script src="../scripts/logout.js"></script>
-    <script src="../scripts/send_msg.js"></script>
 </body>
 
 </html>

@@ -3,6 +3,11 @@ const add_to_fav_url = "http://127.0.0.1:8000/api/v0.1/add_favorite";
 const single_page_container = document.querySelector(".user_card");
 let user_id = "";
 const api_tokenn = JSON.parse(localStorage.getItem('token'));
+//For the send a message modal
+const modallBg = document.querySelector('.msg-bg');
+const modallClose = document.querySelector('.modall-close');
+const msg_input = document.getElementById("msg-input");
+const modallSave = document.getElementById("send-msg");
 
 //A function that will create and display the user in the single product page
 function createCard(user_name, user_age, user_location, user_bio) {
@@ -17,7 +22,7 @@ function createCard(user_name, user_age, user_location, user_bio) {
     <p><span class="green">Bio:</span><span class="yellow">${user_bio}</span></p>
 
     <div class="single_user_actions">
-        <i class="fa-regular fa-message"></i>
+        <i id="msg-icon" class="fa-regular fa-message"></i>
         <i class="fa-solid fa-ban"></i>
         <i id="heart" class="fa-regular fa-heart"></i>
     </div>
@@ -28,13 +33,20 @@ function createCard(user_name, user_age, user_location, user_bio) {
     }
 
     //Adding an eventlisteners to the heart here becuase the div is a string and it cannot be accessed later on
-
     const heart_icon = document.getElementById("heart");
-    heart_icon.addEventListener("click", ()=>{
+    heart_icon.addEventListener("click", () => {
         heart_icon.classList.add("fa-solid");
         favUser();
-
     })
+
+    //Adding an eventListener to the message icon in the card
+    const msg_icon = document.getElementById("msg-icon");
+    msg_icon.addEventListener("click", () => {
+        modallBg.classList.add('bg-active');
+        const msg_to_send = msg_input.value;
+        console.log(msg_to_send);
+    })
+
 
 }
 
@@ -51,10 +63,10 @@ const getProfile = async () => {
                 'Authorization': `bearer ${api_tokenn}`
             }
         });
-        const user_name =response.data.user_info.name;
-        const user_age=calculateAge(response.data.user_info.birthdate);
-        const user_location =response.data.user_info.location;
-        const user_bio =response.data.user_info.bio? response.data.user_info.bio:"No bio";
+        const user_name = response.data.user_info.name;
+        const user_age = calculateAge(response.data.user_info.birthdate);
+        const user_location = response.data.user_info.location;
+        const user_bio = response.data.user_info.bio ? response.data.user_info.bio : "No bio";
         createCard(user_name, user_age, user_location, user_bio);
     } catch (error) {
         console.log(error);
@@ -70,7 +82,7 @@ function calculateAge(date) {
     return eval(now - user_dob)
 }
 
-//----------------------------------------------------favorites---------------------------------
+//A function that adds a user to favorites
 const favUser = async () => {
     try {
         const response = await axios.get(`${add_to_fav_url}/${user_id}`, {
@@ -83,6 +95,41 @@ const favUser = async () => {
         console.log(error);
     }
 }
+
+//for the send a message modal
+modallClose.addEventListener('click', function () {
+    modallBg.classList.remove('bg-active');
+});
+
+modallSave.addEventListener('click', function () {
+    console.log(msg_input.value);
+    const data = new FormData();
+    data.append("message", msg_input.value);
+    sendMsg(data);
+
+    modallBg.classList.remove('bg-active');
+});
+
+//add the msg to the db
+const sendMsg = async (data) => {
+    const send_msg_url = "http://127.0.0.1:8000/api/v0.1/send_message"
+    try {
+        const response = await axios.post(`${send_msg_url}/${user_id}`, data, {
+            headers: {
+
+                'Authorization': `bearer ${token}`
+            }
+
+        })
+        console.log(response);
+        console.log("success");
+
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
 
 // Calling the main function 
 getProfile();
