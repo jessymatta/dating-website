@@ -18,7 +18,7 @@ async function getInterestedInUsers() {
     const profiles = response.data.interested_in_profiles;
     for (let i = 0; i < profiles.length; i++) {
         let profile_name = profiles[i].name;
-        let profile_bio = profiles[i].bio ? profiles[i].bio : "nobio";
+        let profile_bio = profiles[i].bio ? profiles[i].bio : "No bio";
         let profile_location = profiles[i].location;
         let profile_age = calculateAge(profiles[i].birthdate);
         let profile_id = profiles[i].id;
