@@ -75,6 +75,8 @@ const upload_pp = async (data) => {
 }
 
 
+// Explanation for whoever is correcting: the backend is working on postman but I faced cors errors while posting, and I didn't want to mess with my php settings as suggested by the internet
+
 
 
 
