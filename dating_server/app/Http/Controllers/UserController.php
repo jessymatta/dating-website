@@ -29,7 +29,14 @@ class UserController extends Controller
             "message"=>"returned interested in users",
             "interested_in_profiles"=> $to_return
         ]);
+    }
 
-
+    public function getUserById($id){
+        $to_return = User::where('id', $id)->get()->first();
+        return response()->json([
+            "status"=>"success",
+            "message"=>"returned user profile",
+            "user info"=> $to_return
+        ]);
     }
 }

@@ -16,6 +16,7 @@ Route::group(['prefix' => 'v0.1'], function () {
         Route::get('/remove_favorite/{id}', [FavoritesController::class, 'removeFavorite'])->name('remove_favorite');
         Route::get('/block_user/{id}', [BlockedUsersController::class, 'blockUser'])->name('block_user');
         Route::post('/upload_pp', [UploadPPController::class, 'uploadProfilePic'])->name('upload_pp');
+        Route::get('/get_user/{id}', [UserController::class, 'getUserById'])->name('get_user');
     });
 
     Route::post('/register', [AuthController::class, 'register'])->name('register');
