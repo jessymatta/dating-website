@@ -26,4 +26,14 @@ class MessageController extends Controller{
             "messss"=> $sent_messages
         ]);
     }
+
+    public function getAllReceivedMessages(){
+        $user_id = Auth::id();//the logged in user
+        $received_messages = DB::table('messages')->where('receiver_id', $user_id)->get();
+        return response()->json([
+            "status"=>"success",
+            "message"=>"returned all received messages",
+            "messss"=> $received_messages
+        ]);
+    }
 }

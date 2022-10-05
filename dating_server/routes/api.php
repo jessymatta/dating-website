@@ -21,6 +21,7 @@ Route::group(['prefix' => 'v0.1'], function () {
         Route::get('/get_user/{id}', [UserController::class, 'getUserById'])->name('get_user');
         Route::post('/send_message/{id}', [MessageController::class, 'sendMessage'])->name('send_message');
         Route::get('/get_messages', [MessageController::class, 'getAllSentMessages'])->name('get_messages');
+        Route::get('/get_received_messages', [MessageController::class, 'getAllReceivedMessages'])->name('get_messages');
     });
 
     Route::post('/register', [AuthController::class, 'register'])->name('register');
