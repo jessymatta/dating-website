@@ -9,3 +9,12 @@ This project implements a dating website using Vanilla HTML, CSS, JS, and Larave
 * Users shall be able to favorite others. Favorite users are displayed in a seperate page.
 * Users shall be able to block others. Blocked users should not appear anywhere
 * Users shall be able to chat with one another
+
+This project was not completed and is missing features
+
+# Screenshots of the present pages
+
+<img src="./dating_frontend/assets/readme-ss/signupPNG.PNG">
+<img src="./dating_frontend/assets/readme-ss/login.PNG">
+<img src="./dating_frontend/assets/readme-ss/homepage.PNG">
+<img src="./dating_frontend/assets/readme-ss/editprofile.PNG">
