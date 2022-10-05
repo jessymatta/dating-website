@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Traits\ResponseJson;
+use App\Http\UserController;
 
 class MessageController extends Controller{
 
@@ -23,7 +24,7 @@ class MessageController extends Controller{
         return response()->json([
             "status"=>"success",
             "message"=>"returned all sent messages",
-            "messss"=> $sent_messages
+            "sent_messages"=> $sent_messages
         ]);
     }
 
@@ -33,7 +34,7 @@ class MessageController extends Controller{
         return response()->json([
             "status"=>"success",
             "message"=>"returned all received messages",
-            "messss"=> $received_messages
+            "received_msgs"=> $received_messages
         ]);
     }
 }

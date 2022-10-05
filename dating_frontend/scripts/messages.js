@@ -41,21 +41,21 @@ getSentMsgs();
 getRecMsgs();
 
 // sent_messages
-
 function createMsgs(profiles, container_name) {
     if (profiles.length != 0) {
         for (let i = 0; i < profiles.length; i++) {
-            let profile_id = profiles[i].receiver_id;
-            let profile_msg = profiles[i].content
-            let profile_msg_date = profiles[i].created_at;
+            const profile_id = profiles[i].receiver_id;
+            const profile_msg = profiles[i].content
+            const profile_msg_date = profiles[i].created_at;
+            const profile_name="";
             const profile_to_append = `
         <div class="message">
-        <p>To:<span>${profile_id}</span></p>
+        <p>To:<span>${profile_name}</span></p>
         <p>Message:<span>${profile_msg}</span></p>
         <p>${profile_msg_date}</p>
         </div>`
             container_name.innerHTML += profile_to_append;
         }
     }
-
 }
+
